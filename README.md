@@ -1,6 +1,5 @@
 <h1 align="center" id="title">Reserve</h1>
 
-<p align="center"><img src="https://socialify.git.ci/lokeshkavisth/reserve/image?font=Inter&amp;forks=1&amp;issues=1&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Plus&amp;pulls=1&amp;stargazers=1&amp;theme=Auto" alt="project-image">
 
 <p id="description">Reserve is a sophisticated MERN (MongoDB Express.js React Node.js) stack project designed to revolutionize the bus reservation process. The platform caters to both travellers and bus operators offering a seamless experience for booking trips and listing buses.
 
