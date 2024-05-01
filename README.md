@@ -1,9 +1,8 @@
-<h1 align="center" id="title">Reserve</h1>
+<h1 align="center" id="title">OBRS</h1>
 
 
 <p id="description">Reserve is a sophisticated MERN (MongoDB Express.js React Node.js) stack project designed to revolutionize the bus reservation process. The platform caters to both travellers and bus operators offering a seamless experience for booking trips and listing buses.
 
-<p align="center"><img src="https://img.shields.io/maintenance/yes/2024" alt="shields"> <img src="https://img.shields.io/website?url=https%3A%2F%2Freserve-your-bus.vercel.app" alt="shields"> <img src="https://img.shields.io/github/contributors/lokeshkavisth/Reserve" alt="shields">
 
 ## Features
 
