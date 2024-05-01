@@ -3,9 +3,12 @@ const express = require("express");
 const cors = require("cors");
 const connectToMongo = require("./src/config/database");
 const router = require("./src/routes/routes");
+const bodyParser = require('body-parser');
 
 const app = express();
+
 app.use(cors());
+app.use(bodyParser.json());
 app.use(express.json());
 app.use("/", router);
 

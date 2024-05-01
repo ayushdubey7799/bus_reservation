@@ -1,12 +1,20 @@
 require("dotenv").config();
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
-const { Booking } = require("../../models/models");
+const stripe =require("stripe")("sk_test_51PBD5uSCd4kCfLlPxGrJfMBFsViTJxcaTEXtHlZHMZZK5OONkrqCicTxpgWOZtABxUnaXQxgWaEUqnCFYaimdUt800SvpBO5Kx");
+
+const Booking = require("../../models/booking");
+// ../../models/models
 
 const createBooking = async (req, res) => {
   const { amount, currency, description, token } = req.body;
 
   try {
-    const booking = await Booking.create(req.body);
+    
+   
+   
+      
+      const  booking = await Booking.create(req.body)
+    
+    
 
     if (!booking) {
       return res

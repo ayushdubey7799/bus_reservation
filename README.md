@@ -41,7 +41,7 @@ Backend
 1. Clone the repository
 
 ```
-git clone https://github.com/lokeshkavisth/Reserve
+
 ```
 
 ```
@@ -54,7 +54,7 @@ cd frontend
 npm install
 ```
 
-4. Create a .env file in the backend directory and set the following environment variables
+4. Create a .env file in the frontend directory and set the following environment variables
 
 ```
 VITE_STRIPE_PUBLISHABLE_KEY

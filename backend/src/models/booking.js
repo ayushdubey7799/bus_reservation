@@ -1,6 +1,6 @@
-const { Schema, model } = require("mongoose");
+const mongoose = require("mongoose");
 
-const BookingSchema = new Schema({
+const BookingSchema = new mongoose.Schema({
   uid: { type: String, required: true, trim: true },
   name: { type: String, required: true, trim: true },
   email: { type: String, required: true, trim: true },
@@ -26,6 +26,6 @@ const BookingSchema = new Schema({
   token: { type: Object },
 });
 
-const Booking = model("booking", BookingSchema);
+const Booking = mongoose.model("booking", BookingSchema);
 
 module.exports = Booking;
