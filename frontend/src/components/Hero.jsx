@@ -21,9 +21,9 @@ const Hero = () => {
     const fetchLocations = async () => {
       try {
         const res = await reserveAPI({ method: "GET", route: "/location" });
-
+        console.log("==========>>>>>" + res.locations[0].district);
         if (res && res.locations) {
-          const locations = res.locations[0].locations.map(({ district }) => ({
+          const locations = res?.locations?.map(({ district }) => ({
             value: district,
             label: district,
           }));
