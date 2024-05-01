@@ -95,12 +95,4 @@ MONGODB_URI
 STRIPE_SECRET_KEY
 ```
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](/LICENSE.md) file for details.
-
-## Contributors
-
-Feel free to contribute or report issues!
-
-Happy coding!
