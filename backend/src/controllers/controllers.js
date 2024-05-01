@@ -4,4 +4,5 @@ module.exports = {
   createBooking: require("./booking/createBooking"),
   fetchBookings: require("./booking/fetchBookings"),
   fetchLocations: require("./location/fetchLocations"),
+  addLocation: require("./location/addLocation")
 };

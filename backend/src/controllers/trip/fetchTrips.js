@@ -16,7 +16,7 @@ const fetchTrips = async (req, res) => {
         }
       }
     }
-
+    console.log(mainQuery);
     const trips = await Trip.find(mainQuery).skip(skip).limit(limit);
 
     if (trips.length === 0) {
