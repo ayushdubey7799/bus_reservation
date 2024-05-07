@@ -25,7 +25,5 @@ const BookingSchema = new mongoose.Schema({
   description: { type: String, required: true, trim: true },
   token: { type: Object },
 });
-
 const Booking = mongoose.model("booking", BookingSchema);
-
 module.exports = Booking;

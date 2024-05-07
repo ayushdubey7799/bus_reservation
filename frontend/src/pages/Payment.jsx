@@ -22,7 +22,7 @@ const Payment = () => {
   const [error, setError] = React.useState(null);
 
   const { booking, user } = useSelector((state) => state.reducer);
-
+  console.log(booking);
   const stripe = useStripe();
   const elements = useElements();
   const navigate = useNavigate();
@@ -42,15 +42,15 @@ const Payment = () => {
       );
 
       const { name } = formValues;
-
+      const amount = (booking.fare)*booking.selectedSeats.length;
       if (tokenError) {
         setError(tokenError.message);
         toast.error(tokenError.message);
       } else {
         {
           const userPaymentData = {
-            amount: booking.fare,
-            currency: "usd",
+            amount: amount,
+            currency: "inr",
             ...formValues,
             uid: user.uid,
             token: token.id,
@@ -84,22 +84,22 @@ const Payment = () => {
                   billing_details: {
                     name: name,
                     address: {
-                      line1: "1 Main street",
-                      city: "San Francisco",
+                      line1: "BH-220",
+                      city: "Noida",
                       postal_code: address_zip,
-                      state: "CA",
-                      country: "US",
+                      state: "UP",
+                      country: "IN",
                     },
                   },
                 },
                 shipping: {
                   name: "Jenny Shipping",
                   address: {
-                    line1: "1 Main street",
-                    city: "San Francisco",
-                    postal_code: "90210",
-                    state: "CA",
-                    country: "US",
+                    line1: "BH-221",
+                    city: "Noida",
+                    postal_code: address_zip,
+                    state: "UP",
+                    country: "IN",
                   },
                 },
               });
@@ -136,7 +136,7 @@ const Payment = () => {
             destination={booking.destination}
             amenities={booking.amenities}
             categories={booking.categories}
-            fare={booking.fare}
+            fare={(booking.fare)*booking.selectedSeats.length}
             arrivalDate={booking.arrivalDate}
             departureDate={booking.departureDate}
             departureTime={booking.departureTime}
@@ -149,7 +149,7 @@ const Payment = () => {
             <ul className="">
               <li className="flex items-center justify-between border-b  py-2">
                 <h4>Bus Fare</h4>
-                <b>&#8377; {booking.fare}</b>
+                <b>&#8377; {(booking.fare)*booking.selectedSeats.length}</b>
               </li>
               <li className="flex items-center justify-between border-b py-2">
                 <h4>Tax Charges</h4>
@@ -161,7 +161,7 @@ const Payment = () => {
               </li>
               <li className="flex items-center justify-between  py-2">
                 <h4>Total Amount</h4>
-                <b>&#8377; {booking.fare}</b>
+                <b>&#8377; {(booking.fare)*booking.selectedSeats.length}</b>
               </li>
             </ul>
           </div>

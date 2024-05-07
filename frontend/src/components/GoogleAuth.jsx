@@ -10,7 +10,6 @@ const GoogleAuth = () => {
     try {
       const credential = await signInWithPopup(Auth, googleProvider);
       const { user } = credential;
-
       if (user) navigate("/");
       console.error("Sign-in with Google failed.");
     } catch (error) {

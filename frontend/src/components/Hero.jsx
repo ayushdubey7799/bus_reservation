@@ -98,7 +98,7 @@ const Hero = () => {
                 placeholder="Select destination"
                 required
                 onChange={(destination) =>
-                  setDestination(destination.value.toLocaleLowerCase())
+                  setDestination(destination?.value?.toLocaleLowerCase())
                 }
               />
 
